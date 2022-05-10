@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>IOTA WebApp</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <h1>IOTA WebApp Demo</h1>
+        <h4><a href="https://github.com/edoardols/esp8266-IOTA">Project Repository</a></h4>
+        <h4><a href="https://github.com/edoardols/esp8266-IOTA-WebApp">WebApp Repository</a></h4>
+        <!--
+        <button class="button button1" onclick="test_main()">TEST</button>
+        -->
+
+        <div id="chartDiv" style="width: 1000px; height: 400px; margin: 0px auto"></div>
+        <div id="chartDiv2" style="width: 1000px; height: 400px; margin: 0px auto"></div>
+        
+    </body>
+
+    <!-- Main -->
+    <script src="main.js"></script>
+
+    <!-- Chart -->
+    <script src="https://code.jscharting.com/2.9.0/jscharting.js"></script>
+    <script src="server/chart.js"></script>
+
+    <!-- server/lib -->
+    <script src="server/lib/hex2ascii.js"></script>
+
+    <!-- server -->
+    <script src="server/server.js"></script>
+    <script src="server/message.js"></script>
+</html>

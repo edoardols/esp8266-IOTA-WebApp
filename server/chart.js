@@ -19,17 +19,46 @@ function drawChart() {
 
         //DEBUG TIME
         let time = databaseArray[i][2];
+        let temperature = time.split(":");
+        temperature.push(databaseArray[i][3]);
+
+        let humidity = time.split(":");
+        humidity.push(databaseArray[i][4]);
+
+        temperature_array.push(temperature);
+        humidity_array.push(humidity);
+
+        //console.log(temporary_array);
+        //temporary_array2.push(temporary_array);
+
         //temperature_array.push({x: time, y: databaseArray[i][3]});
         //humidity_array.push({x: time, y: databaseArray[i][4]});
 
 
-        temperature_array.push({x: time, y: databaseArray[i][3]});
-        humidity_array.push({x: time, y: databaseArray[i][4]});
+        //temperature_array.push({x: time, y: databaseArray[i][3]});
+        //humidity_array.push({x: time, y: databaseArray[i][4]});
+    }
+    //console.log('unsorted:', temperature_array);
+    temperature_array = temperature_array.sort();
+    humidity_array = humidity_array.sort();
+    //console.log('sorted:', temperature_array);
+    let temperature_series = [];
+    let humidity_series = [];
+
+    for(let i = 0; i < databaseArray.length; i++) {
+      let time_temperature = temperature_array[i][0].toString() + ":" + temperature_array[i][1].toString() + ":" + temperature_array[i][2].toString();
+      temperature_series.push({x: time_temperature, y: temperature_array[i][3]});
+
+      let time_humidity = humidity_array[i][0].toString() + ":" + humidity_array[i][1].toString() + ":" + humidity_array[i][2].toString();
+      humidity_series.push({x: time_humidity, y: humidity_array[i][3]});
     }
 
+    
+    //console.log('temp2: ', temporary_array2);
+    //console.log('temp2Sort: ', temporary_array2.sort());
     series = [
-		{name: 'Temperature', points: temperature_array},
-		{name: 'Humidity', points: humidity_array}
+		{name: 'Temperature', points: temperature_series},
+		{name: 'Humidity', points: humidity_series}
 	];
 
     //console.log(series[0]);

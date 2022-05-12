@@ -1,28 +1,60 @@
+:root{
+    font-family: 'Orbitron', sans-serif;
+    background-color: #C7F0BD;
+}
+#info-link {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+#button{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+
+a {
+    flex: auto;
+    text-align: center;
+}
 h1 {
     text-align:center;
 }
 
-h4 {
+h3 {
     text-align:center;
 }
 
+#info1{
+    margin: 20px;
+    flex-grow: 1;
+
+}
+
+#info2{
+    margin: 20px;
+    flex-grow: 1;
+}
+
 .button {
+    
     border: none;
     color: white;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 20px;
 }
   
 .button1 {
-    background-color: #4CAF50; /* Green */
+    background-color: #26413C; /* Green */
     transition-duration: 0.4s;
 } 
   
 .button1:hover {
-    background-color: white;
+    background-color: #B3CDD1;
     color: black;
     border: 2px solid #4CAF50; /* Green */
 }

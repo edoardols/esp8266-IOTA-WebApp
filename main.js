@@ -1,4 +1,8 @@
+window.onload = function(){
 
-function test_main() {
-    serverStart();
-}
+    setInterval(function() {
+
+        searchMessage();
+    }, 1000);
+    
+};

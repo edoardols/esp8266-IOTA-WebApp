@@ -4,18 +4,42 @@
         <meta charset="UTF-8">
         <title>IOTA WebApp</title>
         <link rel="stylesheet" href="style.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
     </head>
 
     <body>
-        <h1>IOTA WebApp Demo</h1>
-        <h4><a href="https://github.com/edoardols/esp8266-IOTA">Project Repository</a></h4>
-        <h4><a href="https://github.com/edoardols/esp8266-IOTA-WebApp">WebApp Repository</a></h4>
-        <!--
-        <button class="button button1" onclick="test_main()">TEST</button>
-        -->
+        <div id="title">
+            <h1><span>IOTA Web App</span></h1>
+		    <h3><span>An air quality monitoring system developent on IOTA's Tangle</span></h3>
+            <div id="button">
+                <a href="https://github.com/edoardols/esp8266-IOTA" target="_blank" class="button button1">Project Repository</a>
+                <a href="https://github.com/edoardols/esp8266-IOTA-WebApp" target="_blank" class="button button1">WebApp Repository</a>
+            </div>
+            
+        </div>
+        
+        <div id="info-link">
 
-        <div id="chartDiv" style="width: 1000px; height: 400px; margin: 0px auto"></div>
-        <div id="chartDiv2" style="width: 1000px; height: 400px; margin: 0px auto"></div>
+            <div id="info1">
+                <b>Message:</b> TEST_WEB_APP4<br>
+                <b>Station Name:</b> esp8266 EL<br>
+                <b>Installation Date:</b> 10-05-2022<br>
+                <b>Coordinates:</b> 43°06'34.1"<b>N</b> 12°23'33.7"<b>E</b>
+            </div>
+            <div id="info2">
+                <b>Place Name:</b> Perugia<br>
+                <b>Owner:</b><br>
+                <b>Sensor1:</b> DHT11<br>
+                <b>Sensor2:</b> MQ-135
+            </div>
+        </div>
+        
+        <div id="chartDivCo2" style="width: 1000px; height: 400px; margin: 0px auto"></div>
+        <div id="chartDivTemperature" style="width: 1000px; height: 400px; margin: 0px auto"></div>
+        <div id="chartDivHumidity" style="width: 1000px; height: 400px; margin: 0px auto"></div>
         
     </body>
 
@@ -30,6 +54,5 @@
     <script src="server/lib/hex2ascii.js"></script>
 
     <!-- server -->
-    <script src="server/server.js"></script>
     <script src="server/message.js"></script>
 </html>

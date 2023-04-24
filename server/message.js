@@ -1,4 +1,4 @@
-let index_iota = 'TEST_WEB_APP7';
+let index_iota = 'TEST_WEB_APP8';
 
 let messageIdsRead = [];
 let databaseArray = [];
